@@ -32,15 +32,17 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.site-header h1 {
-  font-family: 'Geist Pixel', monospace;
-  font-size: 1.8rem;
-  margin: 0;
-  color: navy;
+.site-logo {
+  height: 32px;
+  width: auto;
 }
-nav {
-  margin-top: 8px;
+.logo-link {
+  text-decoration: none;
+  display: inline-block;
 }
 nav a {
   color: #0066cc;
@@ -56,7 +58,7 @@ nav a:hover {
 .main-content {
   padding: 32px 0;
 }
-h2, h3 {
+h1, h2, h3 {
   font-family: 'Geist Pixel', monospace;
   color: navy;
   margin-top: 24px;
@@ -65,7 +67,7 @@ ul {
   padding-left: 0;
   list-style: none;
 }
-img {
+img:not(.site-logo) {
   width: 200px;
   border-radius: 10px;
   margin-top: 16px;
@@ -86,38 +88,29 @@ hr {
   color: #666;
 }
 
-/* Адаптивность для мобильных устройств */
+/* Адаптивность */
 @media (max-width: 768px) {
   .container {
     padding: 0 16px;
   }
-
-  .site-header h1 {
-    font-size: 1.4rem;
-  }
-
-  nav {
-    margin-top: 12px;
+  .site-logo {
+    height: 28px;
   }
   nav a {
     margin-right: 12px;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
-
   .main-content {
     padding: 24px 0;
   }
-
-  h2, h3 {
+  h1, h2, h3 {
     font-size: 1.3rem;
     margin-top: 20px;
   }
-
-  img {
+  img:not(.site-logo) {
     width: 100%;
     max-width: 200px;
   }
-
   hr {
     margin: 20px 0;
   }
